@@ -12,23 +12,23 @@ pipeline {
 				sh 'echo $TEST'
 			}
 		}
-	}
-	
-	stage('Deploy - Staging') {
-		steps {
-			sh 'echo "Staging..."'
+		
+		stage('Deploy - Staging') {
+			steps {
+				sh 'echo "Staging..."'
+			}
 		}
-	}
 
-	stage('Deploy - Human check') {
-		steps {
-			input "Does the staging environment look ok?"
+		stage('Deploy - Human check') {
+			steps {
+				input "Does the staging environment look ok?"
+			}
 		}
-	}
 
-	stage('Deploy - Production') {
-		steps {
-			sh 'echo "Deployment completed successfully."'
+		stage('Deploy - Production') {
+			steps {
+				sh 'echo "Deployment completed successfully."'
+			}
 		}
 	}
 }
