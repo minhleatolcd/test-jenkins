@@ -1,7 +1,7 @@
 pipeline {
 	agent any
 
-	environnement {
+	environment {
 		TEST = 'variable_test'
 	}
 
